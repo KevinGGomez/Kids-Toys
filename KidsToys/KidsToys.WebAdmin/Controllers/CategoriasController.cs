@@ -61,7 +61,7 @@ namespace KidsToys.WebAdmin.Controllers
         [HttpPost]
         public ActionResult Editar(Categoria categoria)
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 if (categoria.Descripcion != categoria.Descripcion.Trim())
                 {
