@@ -9,7 +9,7 @@ namespace KidsToys.BL
     public class ProductosBL
     {
         Contexto _contexto;
-        public List<Producto>ListadeProductos { get; set; }
+        public List<Producto> ListadeProductos { get; set; }
 
         public ProductosBL()
         {
@@ -17,20 +17,31 @@ namespace KidsToys.BL
             ListadeProductos = new List<Producto>();
         }
 
-       public List<Producto> ObtenerProductos()
+        public List<Producto> ObtenerProductos()
         {
-
             ListadeProductos = _contexto.Productos
-                 .Include("Categoria")
-                 .ToList();
+                .Include("Categoria")
+                .OrderBy(r => r.Categoria.Descripcion)
+                .ThenBy(r => r.Descripcion)
+                .ToList();
 
             return ListadeProductos;
-          
+        }
+
+        public List<Producto> ObtenerProductosActivos()
+        {
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .Where(r => r.Activo == true)
+                .OrderBy(r => r.Descripcion)
+                .ToList();
+
+            return ListadeProductos;
         }
 
         public void GuardarProducto(Producto producto)
         {
-            if(producto.Id == 0)
+            if (producto.Id == 0)
             {
                 _contexto.Productos.Add(producto);
             }
@@ -43,7 +54,7 @@ namespace KidsToys.BL
                 productoExistente.Precio = producto.Precio;
                 productoExistente.UrlImagen = producto.UrlImagen;
             }
-                        
+
             _contexto.SaveChanges();
         }
 
@@ -62,7 +73,5 @@ namespace KidsToys.BL
             _contexto.Productos.Remove(producto);
             _contexto.SaveChanges();
         }
-
     }
-
 }
