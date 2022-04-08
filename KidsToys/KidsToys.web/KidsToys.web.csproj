@@ -126,6 +126,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adward\about.html" />
+    <Content Include="adward\contact.html" />
+    <Content Include="adward\css\bootstrap.css" />
+    <Content Include="adward\css\responsive.css" />
+    <Content Include="adward\css\style.css" />
+    <Content Include="adward\images\body-bg.jpg" />
+    <Content Include="adward\images\bus.png" />
+    <Content Include="adward\images\hero-bg.png" />
+    <Content Include="adward\images\hero.png" />
+    <Content Include="adward\images\ima1.jpg" />
+    <Content Include="adward\images\ima2.jpg" />
+    <Content Include="adward\images\ima3.jpg" />
+    <Content Include="adward\images\ima4.jpg" />
+    <Content Include="adward\images\ima5.jpg" />
+    <Content Include="adward\images\j1.png" />
+    <Content Include="adward\images\j2.png" />
+    <Content Include="adward\images\j3.jpg" />
+    <Content Include="adward\images\j4.png" />
+    <Content Include="adward\images\j5.png" />
+    <Content Include="adward\images\j6.png" />
+    <Content Include="adward\images\kids.jpg" />
+    <Content Include="adward\images\logo.png" />
+    <Content Include="adward\images\logo123.png" />
+    <Content Include="adward\images\menu.png" />
+    <Content Include="adward\images\next.png" />
+    <Content Include="adward\images\portada.png" />
+    <Content Include="adward\images\portada1.png" />
+    <Content Include="adward\images\prev.png" />
+    <Content Include="adward\images\right-arrow.png" />
+    <Content Include="adward\images\search-icon-mobile.png" />
+    <Content Include="adward\images\search-icon.png" />
+    <Content Include="adward\images\shape-1.png" />
+    <Content Include="adward\images\shape-2.png" />
+    <Content Include="adward\index.html" />
+    <Content Include="adward\js\bootstrap.js" />
+    <Content Include="adward\js\jquery-3.4.1.min.js" />
+    <Content Include="adward\teacher.html" />
+    <Content Include="adward\vehicle.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -140,12 +178,10 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Productos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
