@@ -19,7 +19,7 @@ namespace KidsToys.BL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            Database.SetInitializer(new DatosdeInicio()); //Agregar datos de inicio a la basae de datos al momento de crearla.
+            Database.SetInitializer(new DatosdeInicio()); //Agregar datos de inicio a la base de datos al momento de crearla.
         }
 
         public DbSet<Producto>Productos { get; set; }

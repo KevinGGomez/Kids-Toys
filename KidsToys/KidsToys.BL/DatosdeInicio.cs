@@ -13,16 +13,23 @@ namespace KidsToys.BL
         {
             var nuevoUsuario = new Usuario();
 
-            nuevoUsuario.Nombre = "admin";
+            nuevoUsuario.Nombre = "Kevin";
             nuevoUsuario.Contrasena = Encriptar.CodificarContrasena("123");
 
-            nuevoUsuario.Nombre = "Abigail";
-            nuevoUsuario.Contrasena = Encriptar.CodificarContrasena("456");
+            var nuevoUsuario1 = new Usuario();
 
-            nuevoUsuario.Nombre = "Daniel";
-            nuevoUsuario.Contrasena = Encriptar.CodificarContrasena("789");
+            nuevoUsuario1.Nombre = "Abigail";
+            nuevoUsuario1.Contrasena = Encriptar.CodificarContrasena("456");
+
+
+            var nuevoUsuario2 = new Usuario();
+
+            nuevoUsuario2.Nombre = "Daniel";
+            nuevoUsuario2.Contrasena = Encriptar.CodificarContrasena("789");
 
             contexto.Usuarios.Add(nuevoUsuario);
+            contexto.Usuarios.Add(nuevoUsuario1);
+            contexto.Usuarios.Add(nuevoUsuario2);
 
             base.Seed(contexto);
         }
