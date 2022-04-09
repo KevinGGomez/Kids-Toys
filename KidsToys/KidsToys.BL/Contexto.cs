@@ -19,6 +19,7 @@ namespace KidsToys.BL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer(new DatosdeInicio()); //Agregar datos de inicio a la basae de datos al momento de crearla.
         }
 
         public DbSet<Producto>Productos { get; set; }
@@ -27,6 +28,7 @@ namespace KidsToys.BL
 
         public DbSet<Orden> Ordenes { get; set; }
         public DbSet<OrdenDetalle> OrdenDetalle { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
     }
 }

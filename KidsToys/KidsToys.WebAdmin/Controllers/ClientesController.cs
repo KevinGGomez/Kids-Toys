@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace KidsToys.WebAdmin.Controllers
 {
 
-   
+    [Authorize]
     public class ClientesController : Controller
     {
         ClientesBL _clientesBL;
